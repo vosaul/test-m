@@ -1,0 +1,5 @@
+<div class="categories_list">
+  {% for category in site.categories %}
+  <button data-cat="{{ category[0] | replace: ' ', '-'}}">{{ category[0]}}</button>
+  {% endfor %}
+</div>

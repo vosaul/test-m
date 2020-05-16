@@ -1,0 +1,18 @@
+<footer class="site-footer h-card">
+  <data class="u-url" href="{{ "/" | relative_url }}"></data>
+  <div class="wrapper">
+    <div class="footer-col-wrapper">
+      <h2 class="footer-heading">{{ site.title | escape }}</h2>
+      <div class="footer-col footer-col-1">
+        {%- for item in site.data.footer -%}
+        <a href="{{item.link}}" class="footer_link">{{item.title}}</a>
+        {%- endfor -%}
+      </div>
+      <div class="footer-col footer-col-1">
+        <span class="contact email">{{site.email}}</span>
+        <span class="contact tel">{{site.tel}}</span>
+        <span class="contact telegram">{{site.telegram}}</span>
+      </div>
+    </div>
+  </div>
+</footer>

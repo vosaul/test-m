@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <a href="{{'/blog.html' | relative_url}}">&lt; Назад к списку статей</a>
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-category">{{post.categories}}</p>
+  </header>
+  <img src="{{page.image | relative_url}}" alt="{{page.title}}">
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+<span class="tags">Тэги:</span>
+{%- for tag in page.tags -%}
+  <a href="#"" class="tag_link">{{tag}}</a>
+{%- endfor -%}
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

@@ -1,0 +1,17 @@
+---
+layout: default
+---
+{%- include categories.html -%}
+<h2>Популярные статьи</h2>
+<div class="posts_grid">
+  {%- for post in site.posts -%}
+    <div class="post_card">
+      <img src="{{post.image | relative_url}}" alt="{{post.title}}">
+      <a href="{{post.url | relative_url}}">
+        <h3 class="card_title">{{post.title}}</h3>
+      </a>
+      <p class="card_body">{{post.excerpt}}</p>
+    </div>
+  {%- endfor -%}
+  <button class="read_all">Читать все статьи</button>
+</div>

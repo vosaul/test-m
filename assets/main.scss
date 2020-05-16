@@ -1,0 +1,36 @@
+---
+---
+
+@import "minima";
+* {
+  box-sizing: border-box;
+}
+.page-content {
+  padding-top: 250px;
+}
+.site-header {
+  position: absolute;
+  width: 100%;
+  background: #000;
+  .navbar-nav {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    .nav-item {
+      margin: 10px;
+      .nav-link {
+        color: #fff;
+        padding: 10px 20px;
+      }
+    }
+  }
+}
+.hero {
+  padding: 100px 10px 30px;
+  background-image: url("/assets/images/home_hero.jpg");
+  background-size: cover;
+}
+.tag_link {
+  margin: 10px;
+  text-decoration: underline;
+}

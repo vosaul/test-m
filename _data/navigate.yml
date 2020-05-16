@@ -1,0 +1,16 @@
+navigation: 
+  - title: Обо мне
+    link : '/'
+  - title: Почему я?
+    link : '/#why_me' 
+  - title: Тарифы
+    link : '/#prices' 
+  - title: Гибкие условия
+    link : '/#flexible_cond' 
+  - title: Прочие условия
+    link : '#/other_cond' 
+  - title: Контакты
+    link : '/#contacts' 
+  - title: Блог
+    link : '/blog' 
+  

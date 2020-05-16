@@ -1,0 +1,8 @@
+{%- assign parent = include.parent -%}
+{%- assign home = site.data.[parent] -%}
+<section class="hero">
+  <h1 class="title">{{home.title}}</h1>
+  <p class="descr">{{home.descr}}</p>
+  <p class="promise">{{home.promise}}</p>
+  <button class="down"></button>
+</section>

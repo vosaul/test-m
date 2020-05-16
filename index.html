@@ -1,0 +1,60 @@
+---
+layout: home
+---
+{%- assign home = site.data.home -%}
+{%- include hero.html parent="home" -%}
+
+<section class="why_me" id="why_me">
+  <h2>{{home.why_title}}</h2>
+  {%- for item in home.why_items -%}
+  <p class="why_item">{{item.item}}</p>
+  {%- endfor -%}
+</section>
+
+<section class="prices" id="prices">
+  <h2>Prices</h2>
+  {%- for item in home.prices -%}
+  <h3 class="plan">{{item.plan}}</h3>
+  <p class="plan_price">{{item.price}}</p>
+  <ul>
+    {%- for prop in item.props -%}
+    <li>{{prop.item}}</li>
+    {%- endfor -%}
+  </ul>
+  {%- endfor -%}
+</section>
+
+<section class="flexible_cond" id="flexible_cond">
+  <h2>{{home.flexible_cond.title}}</h2>
+  <p>{{home.flexible_cond.descr}}</p>
+
+  <ul>
+    {%- for item in home.flexible_cond.items -%}
+    <li>{{item.item}}</li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="other_cond" id="other_cond">
+  <h2>{{home.other_cond.title}}</h2>
+  <ul>
+    {%- for item in home.flexible_cond.items -%}
+    <li>{{item.item}}</li>
+    {%- endfor -%}
+  </ul>
+</section>
+
+<section class="contacts" id="contacts">
+  <h2>Контакты</h2>
+  <span class="contact_item phone">{{site.tel}}</span>
+  <span class="contact_item email">{{site.email}}</span>
+  <span class="contact_item telegram">{{site.telegram}}</span>
+  <h3>Обратная связь:</h3>
+  <form action="#" class="feedback">
+    <p>Вы можете отправить мне сообщение прямо сейчас:</p>
+    <textarea name="message" id="message" cols="30" rows="10"  placeholder="Ваше сообщение..."></textarea>
+    <input type="text" name="name" id="name"  placeholder="Ваше имя">
+    <input type="tel" name="tel" id="tel" placeholder="Ваш телефон">
+    <input type="submit" value="submit">
+  </form>
+</section>
