@@ -1,0 +1,21 @@
+<div class="entry-meta">
+  <span class="date">
+    <a href="{{page.url}}" title="{{include.title}}" rel="bookmark">
+      <time class="entry-date" datetime="{{include.date | date: '%Y-%m-%d %H:%M'}}">{{include.date | date: "%B %d, %Y"}}
+      </time>
+    </a>
+  </span>
+  <span class="categories-links">
+    {% for cat in include.categories %}
+    <a href="{{ '/category/' | relative_url}}{{cat | slugify: 'latin'}}" rel="category">{{cat}} </a>
+    {% endfor %}
+  </span>
+  <span class="tags-links">
+    {% for tag in include.tags %}
+    <a href="/tag{{ tag  | slugify: 'latin' | relative_url}}" rel="tag">{{tag}}</a>
+    {% endfor %}
+  </span>
+  <span class="author vcard"><a class="url fn n" href="/author{{ include.author | slugify: 'latin' | relative_url }}"
+      title="View all posts by {{include.author}}" rel="author">{{ include.author }}</a>
+  </span>
+</div>

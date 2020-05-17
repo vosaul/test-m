@@ -1,0 +1,10 @@
+<ul id="cloud">
+  <li style="font-size: 150%"><a href="index.html">All</a></li>
+  {% for tag in site.data.tags %}
+  {% assign curTag = tag | first | slugize %}
+  {% assign langtag = landat.tags | where:"slug",curTag | first %}
+  <li style="font-size: {{ tag | last | size | times: 100 | divided_by: site.tags.size | plus: 20 }}%">
+    <a href="{{ curTag }}.html">{{ langtag.name }}</a>
+  </li>
+  {% endfor %}
+</ul>

@@ -1,8 +1,14 @@
 {%- assign parent = include.parent -%}
-{%- assign home = site.data.[parent] -%}
+{%- assign this = site.data.[parent] -%}
 <section class="hero">
-  <h1 class="title">{{home.title}}</h1>
-  <p class="descr">{{home.descr}}</p>
-  <p class="promise">{{home.promise}}</p>
-  <button class="down"></button>
+  <div class="inner">
+    <h1 class="title">{{this.title}}</h1>
+    <hr class="divider">
+    <p class="descr">{{this.descr}}</p>
+    <p class="promise"><b>{{this.promise}}</b></p>
+    <button class="down">
+      <img src="/assets/images/mouse.svg" alt="mouse down">
+      <img src="/assets/images/arrow.png" alt="arrow down">
+    </button>
+  </div>
 </section>

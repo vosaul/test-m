@@ -4,27 +4,28 @@ layout: default
 
 <div class="home">
   {%- if page.title -%}
-    <h1 class="page-heading">{{ page.title }}</h1>
+  <h1 class="page_title">{{ page.title | markdownify }}</h1>
   {%- endif -%}
 
   {{ content }}
 
   {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">Блог</h2>
-    <ul class="post-list">
-      {%- for post in site.posts limit: site.data.home.blog_count -%}
-      <li>
-        <img src="{{post.image}}" alt="{{post.title}}">
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
-        </h3>
+  <section class="blog">
+    <div class="inner">
+      <h2 class="post-list-heading">Блог</h2>
+      <ul class="post-list">
+        {%- for post in site.posts limit: site.data.home.blog_count -%}
+        <li>
+          <img src="{{post.image}}" alt="{{post.title}}">
+            <a class="post_link" href="{{ post.url | relative_url }}">
+              {{ post.title | escape }}
+            </a>
           {{ post.excerpt }}
-      </li>
-      {%- endfor -%}
-    </ul>
-    <a href="{{'/blog' | relative_url}}" class="btn">{{site.data.home.blog_button}}</a>
+        </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    <a href="{{'/blog' | relative_url}}" class="blog_btn">{{site.data.home.blog_button}}</a>
+  </section>
   {%- endif -%}
-
 </div>

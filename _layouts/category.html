@@ -1,0 +1,42 @@
+---
+layout: default
+---
+<div id="main" class="site-main">
+  <div id="primary" class="content-area">
+    <div id="content" class="site-content" role="main">
+
+      {% for post in paginator.posts %}
+      <header class="entry-header">
+        <h1 class="entry-title">
+          <a href="{{post.url}}" rel="bookmark">{{post.title}}</a>
+        </h1>
+        {% include entry_meta.html title = post.title tags=post.tags categories=post.categories date=post.date %}
+      </header>
+      <div class="entry-content">
+        {{post.excerpt}}
+      </div>
+
+      {% endfor %}
+
+    </div>
+  </div>
+
+  <!-- Pagination links -->
+
+  <nav class="navigation paging-navigation" role="navigation">
+    <h1 class="screen-reader-text">Posts navigation</h1>
+    <div class="nav-links">
+      {% if paginator.next_page %}
+      <div class="nav-previous"><a href="{{ paginator.next_page_path }}"><span class="meta-nav">←</span> Older
+          posts</a></div>
+      {% endif %}
+      {% if paginator.previous_page %}
+      <div class="nav-next"><a href="{{ paginator.previous_page_path }}">Newer
+          posts
+          <span class="meta-nav">→</span></a></div>
+      {% endif %}
+
+    </div>
+    <!-- .nav-links -->
+  </nav>
+</div

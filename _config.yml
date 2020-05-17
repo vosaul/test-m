@@ -11,7 +11,73 @@ baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: jekyllrb
 github_username:  jekyll
+# Pagination Settings
+collections:
+ authors:
+  output: true
+  permalink: /author/:name/
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
 
+permalink: /:year/:month/:day/:title:output_ext
+#excerpt_separator: <!--more-->
+autopages:
+  enabled: true
+  tags: 
+    layouts: 
+      - tags.html
+    enabled: true
+    slugify:
+      mode: 'ascii'
+      cased: true
+  categories:
+    layouts:
+      - category.html
+    enabled: true
+    slugify:
+      mode: 'ascii'
+      cased: true
+  collections:
+    layouts:
+      - autopage_collection.html
+    enabled: true
+    slugify:
+      mode: 'ascii'
+      cased: true
+  posts:
+    layouts: 
+      - posts.html
+    enabled: true
+    slugify:
+      mode: 'ascii'
+      cased: true
+# Pagination Settings
+pagination:
+  enabled: true
+  per_page: 6
+  permalink: '/:num/'
+  title: ':title | :num of :max'
+  limit: 0
+  sort_field: 'date'
+  sort_reverse: true
+ # extension: htm
+ # indexpage: 'default'
+  trail: 
+    before: 2
+    after: 2
 # Build settings
 plugins:
   - jekyll-feed

@@ -1,10 +1,13 @@
 ---
-layout: default
+layout    : default
+permalink : /blog/
+pagination:
+  enabled : true
 ---
 {%- include categories.html -%}
 <h2>Популярные статьи</h2>
 <div class="posts_grid">
-  {%- for post in site.posts -%}
+  {%- for post in paginator.posts -%}
     <div class="post_card">
       <img src="{{post.image | relative_url}}" alt="{{post.title}}">
       <a href="{{post.url | relative_url}}">
@@ -15,3 +18,20 @@ layout: default
   {%- endfor -%}
   <button class="read_all">Читать все статьи</button>
 </div>
+
+<!-- Pagination links -->
+<nav class="navigation paging-navigation" role="navigation">
+  <h1 class="screen-reader-text">Posts navigation</h1>
+  <div class="nav-links">
+    {% if paginator.next_page %}
+    <div class="nav-previous"><a href="{{ paginator.next_page_path }}"><span class="meta-nav">←</span> Предыдущие посты</a>
+    </div>
+    {% endif %}
+    {% if paginator.previous_page %}
+    <div class="nav-next"><a href="{{ paginator.previous_page_path }}">Новые посты
+        <span class="meta-nav">→</span></a></div>
+    {% endif %}
+
+  </div>
+  <!-- .nav-links -->
+</nav>

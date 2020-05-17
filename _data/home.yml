@@ -5,19 +5,28 @@ promise: Я сниму с вас 99% оперативной работы, пол
 # why_me section
 why_title: Почему я?
 why_items:
-  - item: Стану вашим <b>незаменимым помощником</b>
-  - item: <b>Доступна 24/7</b>, подстроюсь под ваш график 
+  - item : Стану вашим <b>незаменимым помощником</b>
+    image: '/assets/images/bag.svg'
+  - item: <b>Доступна 24/7</b>, подстроюсь под ваш график
+    image: '/assets/images/clock.svg' 
   - item: Устный и письменный <b>английский язык</b>, advanced 
+    image: '/assets/images/award.png'
   - item: Сделаю все <b>качественно, аккуратно и в срок</b>
+    image: '/assets/images/check.png'
   - item: <b>Подберу несколько</b> оптимальных <b>вариантов</b> под ваш запрос 
+    image: '/assets/images/layers.png'
   - item: <b>Быстро и легко обучаюсь</b> в случае необходимости выполнения нестандартных задач
+    image: '/assets/images/book.png'
   - item: Недовольны результатом? <b>Буду искать решение</b>, пока не останетесь довольны :) 
+    image: '/assets/images/lens.png'
   - item: 'И самое главное: мне нравится эта работа, поэтому пусть это будет дополнительной гарантией'
+    image: '/assets/images/hearts.png'
 
 # Prices section
 prices:
   - plan: EASY HELP
     price: 700 USD
+    color: '#6798C0'
     props:
       - item: Простые задачи
       - item: до 3 часов в день
@@ -29,8 +38,9 @@ prices:
       - item: Организация встреч
       - item: Менеджмент почты
 
-  - plan: DELUXE
+  - plan : DELUXE
     price: 1 500 USD
+    color: '#4A78B4'
     props:
       - item: Сложные задачи
       - item: до 7 часов в день
@@ -41,8 +51,9 @@ prices:
       - item: Поиск клиентов
       - item: Менеджмент проектов
   
-  - plan: Обсуждается индивидуально
-    price: 700 USD
+  - plan : SUPERIOR
+    price: Обсуждается индивидуально
+    color: '#3761B1'
     props:
       - item: 24/7
       - item: Персональные поручения 
