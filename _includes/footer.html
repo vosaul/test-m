@@ -1,28 +1,25 @@
 <footer class="site-footer h-card">
   <data class="u-url" href="{{ "/" | relative_url }}"></data>
-  <div class="inner">
-    <div class="footer-col-inner">
-      <h2 class="footer-heading">{{ site.title | escape }}</h2>
-      <div class="footer-col footer-col-1">
+  <div class="footer_grid inner">
+      <div class="footer_col footer_col_2">
+        <div class="contact_item phone">
+          <img src="/assets/images/f-phone.png" alt="phone">
+          <span>{{site.tel}}</span>
+        </div>
+        <div class="contact_item email">
+          <img src="/assets/images/f-mail.png" alt="email">
+          <a href="mailto: {{site.email}}">{{site.email}}</a>
+        </div>
+        <div class="contact_item telegram">
+          <img src="/assets/images/f-skype.png" alt="skype">
+          <img src="/assets/images/f-telegram.png" alt="telegram">
+          <span>{{site.telegram}}</span>
+        </div>
+      </div>
+      <div class="footer_col footer_col_1">
         {%- for item in site.data.footer -%}
         <a href="{{item.link}}" class="footer_link">{{item.title}}</a>
         {%- endfor -%}
       </div>
-      <div class="footer-col footer-col-1">
-        <div class="contact_item phone">
-          <img src="/assets/images/phone.png" alt="">
-          <p>{{site.tel}}</p>
-        </div>
-        <div class="contact_item email">
-          <img src="/assets/images/mail.png" alt="">
-          <p><a href="mailto: {{site.email}}">{{site.email}}</a></p>
-        </div>
-        <div class="contact_item telegram">
-          <img src="/assets/images/skype.png" alt="">
-          <img src="/assets/images/telegram.png" alt="">
-          <p>{{site.telegram}}</p>
-        </div>
-      </div>
-    </div>
   </div>
 </footer>

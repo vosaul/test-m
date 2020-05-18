@@ -3,8 +3,8 @@ layout    : post
 image     : '/assets/images/post2.png'
 title     :  "Разоблачаем мифы о профессии личного помощника"
 date      : 2020-05-16 00:39:10 +0300
-categories: Руководителям
-tags      : [Карьера, Кадровая политика, Эффективность, Имидж]
+categories: boss
+tags      : [boss, senior]
 tags      :
 ---
 

@@ -1,2 +1,8 @@
-- slug: beginner
-  title: Beginner
+- category: Карьера ассистента
+  slug    : career
+- category: Руководителям
+  slug    : boss
+- category: Полезные инструменты 
+  slug    : tools
+- category: База документов
+  slug    : docs

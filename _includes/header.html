@@ -9,7 +9,9 @@
       <a class="nav-item nav-link" href="{{site.url}}{{item.link}}">{{item.title}}</a>
       {% endfor %}
   </nav>
-  <span class="phone"><img src="{{'/assets/images/tel_white.png' | relative_url}}" alt="phone"> {{site.tel}}</span>
+  <span class="phone">
+    <img src="{{'/assets/images/tel_white.png' | relative_url}}" alt="phone"> {{site.tel}}
+  </span>
   {%- assign parent = include.parent -%}
   {%- assign home = site.data.[parent] -%}
 </header>

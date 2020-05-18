@@ -3,7 +3,7 @@ layout: post
 image : '/assets/images/post2.png'
 title :  "Что должен уметь персональный ассистент"
 date  :   2020-05-16 00:39:10 +0300
-categories: jekyll update
+categories: tools
 tags:
 ---
 

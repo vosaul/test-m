@@ -17,15 +17,15 @@ layout: default
         {%- for post in site.posts limit: site.data.home.blog_count -%}
         <li>
           <img src="{{post.image}}" alt="{{post.title}}">
-            <a class="post_link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
+          <a class="post_link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
           {{ post.excerpt }}
         </li>
         {%- endfor -%}
       </ul>
+      <a href="{{'/blog' | relative_url}}" class="blog_btn">{{site.data.home.blog_button}}</a>
     </div>
-    <a href="{{'/blog' | relative_url}}" class="blog_btn">{{site.data.home.blog_button}}</a>
   </section>
   {%- endif -%}
 </div>

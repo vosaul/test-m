@@ -1,2 +1,10 @@
 - slug : beginner
-  title: Beginner
+  title: Джун
+- slug : boss
+  title: Босс
+- slug : middle
+  title: Мидл
+- slug : senior
+  title: Сеньор
+- slug : customer
+  title: Заказчик

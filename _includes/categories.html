@@ -1,5 +1,6 @@
-<div class="categories_list">
-  {% for category in site.categories %}
-  <button data-cat="{{ category[0] | replace: ' ', '-'}}">{{ category[0]}}</button>
+<div class="categories_list inner">
+  <h2>Категории:</h2>
+  {% for item in site.data.categories %}
+  <a href="{{item.slug | prepend: 'category/' | relative_url}}">{{item.category}}</a>
   {% endfor %}
 </div>

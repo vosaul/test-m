@@ -3,8 +3,8 @@ layout: post
 image : '/assets/images/post3.png'
 title :  "Что должен уметь персональный ассистент"
 date  :   2020-05-16 00:39:10 +0300
-categories: jekyll update
-tags:
+categories: 'career'
+tags: boss
 ---
 
 Бегает за кофе, собирает упавшие бумаги, открывает двери, забирает костюм из химчистки — это все работа для личного помощника?
