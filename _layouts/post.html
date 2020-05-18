@@ -4,17 +4,25 @@ layout: default
 <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <a href="{{'/blog.html' | relative_url}}">&lt; Назад к списку статей</a>
-    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-category">{{post.categories}}</p>
+    <a class="back" href="{{'/blog' | relative_url}}">&lt; Назад к списку статей</a>
+
+    <h1 class="post-title inner" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-category inner">Категория: <a href="{{page.categories | relative_url}}">{{page.categories}}</a>
+    </p>
   </header>
-  <img src="{{page.image | relative_url}}" alt="{{page.title}}">
-  <div class="post-content e-content" itemprop="articleBody">
+
+  <div class="inner">
+    <img src="{{page.image | relative_url}}" alt="{{page.title}}">
+  </div>
+  <div class="post-content e-content inner" itemprop="articleBody">
     {{ content }}
   </div>
-<span class="tags">Тэги:</span>
-{%- for tag in page.tags -%}
-  <a href="#"" class="tag_link">{{tag}}</a>
-{%- endfor -%}
+
+  <div class="inner tags_cloud">
+    <span class="tags">Тэги:</span>
+    {%- for tag in page.tags -%}
+    <a href="#"" class=" tag_link">{{tag}}</a>
+    {%- endfor -%}
+  </div>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
 </article>
