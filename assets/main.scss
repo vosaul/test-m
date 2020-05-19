@@ -3,9 +3,6 @@
 
 @import "minima";
 
-* {
-  box-sizing: border-box;
-}
 /* @font-face {
   font-family: "Roboto light";
   src: url("{{'/assets/fonts/Roboto/Roboto-Thin.ttf' | relative_url}}") format("truetype");
@@ -18,6 +15,7 @@
 } */
 html * {
   font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
 }
 h2 {
   margin-top: 30px;
@@ -36,8 +34,8 @@ h3 {
 }
 ul {
   list-style-type: none; //url('/assets/images/Ellipse.svg');
-   margin-left: 18px; 
-   li {
+  margin-left: 18px;
+  li {
     &::before {
       content: "\2022";
       color: #14c284;
@@ -46,7 +44,7 @@ ul {
       display: inline-block;
       width: 18px;
     }
-  } 
+  }
 }
 li,
 p {
@@ -118,6 +116,7 @@ a {
   width: 100%;
   color: #3862b1;
   background: white;
+    border-bottom: 1px solid;
   .nav-item {
     font-size: 18px;
     padding: 10px 30px;
@@ -158,11 +157,6 @@ a {
   }
   .divider {
     display: none;
-  }
-  .descr,
-  .promise {
-    margin-top: 40px;
-    max-width: 656px;
   }
   .down {
     position: absolute;
@@ -215,7 +209,6 @@ a {
       padding: 10px 20px;
       background: #6798c0;
       border-radius: 20px;
-      text-align: center;
       font-size: 18px;
       line-height: 1.2;
       color: #ffffff;
@@ -230,13 +223,14 @@ a {
       color: #14c284;
     }
     .plan_props {
+      margin: 0;
       li {
+        width: 210px;
         margin: 7px auto;
         font-style: normal;
         font-weight: normal;
         font-size: 15px;
         line-height: 1.2;
-        text-align: center;
         color: #555555;
       }
     }
@@ -492,7 +486,309 @@ a {
   }
 }
 
+@include media-query($on-palm) {
+  .why_grid {
+    grid-gap: 20px;
+  }
+  h2 {
+    font-size: 40px;
+    margin: 40px auto 30px;
+  }
+  .inner {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+  .site-header .toggle_mnu {
+    display: inline-block;
+  }
+  .page_header {
+    grid-template-columns: 1fr 200px;
+    .toggle_mnu {
+      display: none;
+    }
+    .navbar {
+      top: 0;
+      position: relative;
+      background: transparent;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: stretch;
+        border-bottom: none;
+      .nav-item {
+        padding: 10px 10px 0 10px;
+        color: #fff;
+        font-size: 16px;
+        &:nth-last-child(1) {
+          font-weight: 900;
+        }
+      }
+    }
+    .phone {
+      font-size: 24px;
+      img {
+        display: inline;
+      }
+    }
+  }
+  .hero {
+    padding: 219px 0 30px;
+    .title {
+      font-size: 70px;
+      line-height: 1;
+    }
+    .descr {
+      font-size: 18px;
+      line-height: 1.3;
+      color: #dcdcdc;
+    }
+    .promise {
+      font-size: 22px;
+      line-height: 1.3;
+      color: #fff;
+    }
+    .divider {
+      display: none;
+    }
+    .descr,
+    .promise {
+      margin-top: 40px;
+      max-width: 656px;
+    }
+  }
+  .price_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 30px;
+    justify-content: center;
+    .plan {
+      width: 100%;
+    }
+  }
+  .condit {
+    .cond_item {
+      margin: 7px 0;
+    }
+    p {
+      max-width: 690px;
+      font-size: 18px;
+      text-align: center;
+      line-height: 1.3;
+      text-align: center;
+      margin: 30px auto 40px;
+    }
+  }
+  .cond_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 30px;
+    li {
+      font-size: 16px;
+    }
+  }
+  .other_cond {
+    h2 {
+      font-weight: 300;
+    }
+  }
+  .contacts_grid {
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+    p {
+      font-size: 26px;
+      line-height: 1.2;
+      margin: 7px auto;
+    }
+  }
+  .feedback {
+    padding: 20px;
+    border: 1px solid #f6f8fa;
+    border-radius: 7px;
+    .form_grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      grid-column-gap: 20px;
+      grid-row-gap: 10px;
+      textarea {
+        margin: 0;
+        grid-column: 1/2;
+        grid-row: 1/4;
+      }
+      input {
+        grid-column: 2/3;
+        margin: 0;
+      }
+    }
+  }
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
+  .page-content {
+    margin-bottom: -145px;
+  }
+  .site-footer,
+  .push {
+    height: auto;
+  }
+  .footer_grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 30px;
+    .footer_col_1 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+    .footer_col_2 {
+      display: grid;
+    }
+  }
+
+  /* Blog page */
+
+  .blog_hero {
+    height: auto;
+    padding: 150px 0 20px;
+    background-image: linear-gradient(to right, rgba(#10293d, 0.9), rgba(#10293d, 0.8) 100%),
+      url("/assets/images/blog-hero2.jpg");
+    background-size: cover;
+    background-position: right 0 top 0;
+    .title {
+      display: inline;
+      font-size: 70px;
+    }
+    .subtitle {
+      margin-left: 12px;
+      display: inline;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 70px;
+      line-height: 112%;
+    }
+    .descr {
+      margin: 30px 0;
+      font-weight: 400;
+      max-width: 656px;
+      font-size: 18px;
+      line-height: 130%;
+    }
+  }
+  .categories_list {
+    padding-bottom: 30px;
+    a,
+    h2 {
+      font-size: 18px;
+      display: inline-block;
+      padding: 0 10px;
+    }
+  }
+  .posts_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    background: #f6f8fa;
+  }
+  .pop_posts {
+    .read_all {
+      font-size: 18px;
+      width: fit-content;
+    }
+    .post_card {
+      .card_title {
+        font-size: 22px;
+      }
+    }
+  }
+  .tags_cloud {
+    text-align: center;
+    h2 {
+      font-size: 40px;
+    }
+    a {
+      font-size: 16px;
+      line-height: 220%;
+    }
+  }
+  .navigation {
+    padding-top: 30px;
+    padding-bottom: 30px;
+    .screen-reader-text {
+      display: none;
+    }
+  }
+  .nav-links {
+    text-align: center;
+  }
+}
+
+@include media-query($on-laptop) {
+  .why_grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    * {
+      text-align: left;
+    }
+  }
+  .inner {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+  .price_grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 15px;
+    justify-content: center;
+    .plan {
+      width: 100%;
+    }
+  }
+
+  .post-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-gap: 10px;
+  }
+  .page-content {
+    margin-bottom: -145px;
+  }
+  .site-footer,
+  .push {
+    height: 145px;
+  }
+  .footer_grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 30px;
+    .footer_col_1 {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      a:nth-child(1) {
+        grid-column: 1/4;
+        grid-row: 1/2;
+      }
+    }
+    .footer_col_2 {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      grid-column: 2/3;
+      grid-row: 1/2;
+    }
+  }
+}
 @include media-query($on-desktop) {
+  .why_grid {
+    grid-gap: 20px;
+  }
   h2 {
     font-size: 40px;
     margin: 40px auto 30px;
@@ -558,14 +854,6 @@ a {
       max-width: 656px;
     }
   }
-  .why_grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 20px;
-    * {
-      text-align: left;
-    }
-  }
   .price_grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -580,7 +868,7 @@ a {
       margin: 7px 0;
     }
     p {
-      width: 690px;
+      max-width: 690px;
       font-size: 18px;
       text-align: center;
       line-height: 1.3;
@@ -637,13 +925,13 @@ a {
     grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
   }
- .page-content {
-     margin-bottom: -145px;
- } 
-.site-footer,
-.push {
-  height: 145px;
-}
+  .page-content {
+    margin-bottom: -145px;
+  }
+  .site-footer,
+  .push {
+    height: 145px;
+  }
   .footer_grid {
     display: grid;
     grid-template-columns: 40% 60%;

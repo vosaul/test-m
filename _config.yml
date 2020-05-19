@@ -19,9 +19,9 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "tags"
     values:
-      layout: "author"
+      layout: "posts"
   - scope:
       path: ""
       type: "posts"
