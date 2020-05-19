@@ -15,3 +15,11 @@ function toggle_menu() {
     nav.classList.remove('hidden_small');
   }
 }
+function close_price_descr() {
+  var d = document.getElementById("price_descr");
+  d.classList.add('hidden');
+}
+function open_price_descr() {
+  var d = document.getElementById("price_descr");
+  d.classList.remove('hidden');
+}

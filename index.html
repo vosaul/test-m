@@ -26,10 +26,38 @@ layout: home
         <li>{{prop.item}}</li>
         {%- endfor -%}
       </ul>
+      <div class="what_include" id="what_include" onclick="open_price_descr()">Что включено?</div>
     </div>
     {%- endfor -%}
   </div>
+
+  <!-- Popup price description window  -->
+  <div class="price_descr_popup hidden inner" id="price_descr">
+
+    <img class="close" id="price_descr_closer" src="/assets/images/close.svg" onclick="close_price_descr()">
+
+    <div class="price_descr_grid">
+    {%- for item in home.prices -%}
+    <div class="plan">
+      <h3 class="plan_title" style="background: {{item.color}};">{{item.plan}}</h3>
+      <ul class="plan_includs">
+        {%- for includ in item.includs -%}
+        <li>{{includ.item}}</li>
+        {%- endfor -%}
+      </ul>
+    </div>
+    {%- endfor -%}
+    </div>
+    <div class="contact_me">
+      <p>
+        Необходимо модифицировать входящие в пакет услуги?
+        <br><b>Напишите мне, обсудим :)</br>
+      </p>
+      {%- include messengers_top.html -%}
+    </div>
+  </div>
 </section>
+
 
 <section class="condit flexible_cond inner" id="flexible_cond">
   <h2>{{home.flexible_cond.title}}</h2>
