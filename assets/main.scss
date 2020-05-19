@@ -182,14 +182,18 @@ a {
 }
 .why_me {
   .why_item {
-    /* text-align: center; */
+    display: flex;
+    align-items: center;
     padding: 10px 5px;
     * {
       margin: 5px auto;
     }
-    img,
+    img {
+      width: 45px;
+      height: 45px;
+      margin-right: 20px;
+    }
     .why_txt {
-      display: inline-flex;
       font-size: 15px;
       line-height: 1.2;
       color: #333333;
