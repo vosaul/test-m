@@ -4,19 +4,17 @@ layout: default
 {%- include hero_blog.html -%}
 {%- include categories.html -%}
 <div class="pop_posts">
+
+  {%- assign pc = paginator.posts[0].categories[0] -%}
+
   {% for cat in site.data.categories %}
-  {{paginator.posts[0].categories}}---{{cat.slug}}---{{cat.category}}<br>
-  {% if cat.slug == paginator.posts[0].categories %}
+  {% if cat.slug == pc %} 
   {%- assign category = cat.category -%}
-  %%%{{category}}
-  {% break %}
+  {%- break -%}
   {% endif %}
   {% endfor %}
-  ---{{category}}===
-  {%- assign cats = site.data.categories -%}
-  {% assign all_categories = site.pages | map: "category" %}
-  {%- assign cat = paginator.posts[0].categories -%}
-  <h2>Статьи за категорией {{category}}</h2>
+
+  <h2>Статьи за категорией<br>"{{category}}"</h2>
   <div class="posts_grid inner">
     {%- for post in paginator.posts -%}
     <div class="post_card">
