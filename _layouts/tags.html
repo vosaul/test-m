@@ -4,7 +4,21 @@ layout: default
 {%- include hero_blog.html -%}
 {%- include categories.html -%}
 <div class="pop_posts">
-  <h2>Статьи за тэгом</h2>
+  {%- assign tagt = '' -%}
+  {%- assign s = paginator.posts[0].tags | size | minus: 1 -%}
+  {%- for i in (0..s) -%}
+  {%- assign pt = paginator.posts[0].tags[i] -%}
+  {% for tag in site.data.tags %}
+  {% if tag.slug == paginator.posts[0].tags[i] %}
+  {%- assign tagt = tag.title -%}
+  {%- break -%}
+  {% endif %}
+  {% endfor %}
+  {%- if tagt != '' -%}
+  {%- break -%}
+  {%- endif -%}
+  {%- endfor -%}
+  <h2>Статьи за тэгом<br>"{{tagt}}"</h2>
   <div class="posts_grid inner">
     {%- for post in paginator.posts -%}
     <div class="post_card">
