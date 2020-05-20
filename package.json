@@ -1,0 +1,35 @@
+{
+  "name": "guru",
+  "version": "1.0.0",
+  "description": "files minimization by Gulp",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vosaul/Guru-D.git"
+  },
+  "keywords": [
+    "Gulp",
+    "Jekyll",
+    "Landing",
+    "page"
+  ],
+  "author": "Volodymyr Sauliak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/vosaul/Guru-D/issues"
+  },
+  "homepage": "https://github.com/vosaul/Guru-D#readme",
+  "dependencies": {
+    "autoprefixer": "^9.8.0",
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-load-plugins": "^2.0.3",
+    "gulp-sass": "^4.1.0",
+    "gulp-shell": "^0.8.0",
+    "save-dev": "0.0.1-security"
+  }
+}

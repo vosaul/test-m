@@ -86,11 +86,13 @@ permalink: /:year/:month/:day/:title:output_ext
 exclude:
   - .sass-cache/
   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+  - node_modules/
+  - vendor/bundle/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - package-lock.json
+  - package.json
