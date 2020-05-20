@@ -7,7 +7,14 @@ layout: default
     <a class="back inner" href="{{'/blog' | relative_url}}">&lt; Назад к списку статей</a>
 
     <h1 class="post-title inner" itemprop="name headline">{{ page.title | escape }}</h1>
-    <p class="post-category inner">Категория: <a href="{{page.categories | relative_url}}">{{page.categories}}</a>
+    <p class="post-category inner">Категория: 
+          {%- for item in site.data.categories -%}
+          {%- if item.slug == page.categories[0] -%} 
+          {%- assign title = item.category -%}
+          {%- break -%}
+          {%- endif -%}
+          {%- endfor -%}
+      <a href="{{page.categories[0] | relative_url | prepend: '/category'}}">{{title}}</a>
     </p>
   </header>
 
@@ -21,7 +28,13 @@ layout: default
   <div class="inner tags_cloud">
     <span class="tags">Тэги:</span>
     {%- for tag in page.tags -%}
-    <a href="#"" class=" tag_link">{{tag}}</a>
+    {%- for item in site.data.tags -%}
+      {%- if item.slug == tag -%}
+        {%- assign title = item.title -%}
+        {%- break -%}
+      {%- endif -%}
+    {%- endfor -%}
+    <a href="{{tag | relative_url | prepend: '/tag'}}" class=" tag_link">{{title}}</a>
     {%- endfor -%}
   </div>
   <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
