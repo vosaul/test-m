@@ -8,7 +8,7 @@ navigation:
   - title: Гибкие условия
     link : '/#flexible_cond' 
   - title: Прочие условия
-    link : '#/other_cond' 
+    link : '/#other_cond' 
   - title: Контакты
     link : '/#contacts' 
   - title: Блог

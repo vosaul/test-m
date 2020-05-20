@@ -13,7 +13,7 @@ layout: default
   {%- break -%}
   {% endif %}
   {% endfor %}
-  
+
   <h2>Статьи за категорией<br>"{{category}}"</h2>
   <div class="posts_grid inner">
     {%- for post in paginator.posts -%}
@@ -26,7 +26,7 @@ layout: default
     </div>
     {%- endfor -%}
   </div>
-  <a href="{{/blog" | relative_url}}" class="read_all blog_btn">Показать еще</a>
+  <a href="{{'/blog' | relative_url}}" class="read_all blog_btn">Показать еще</a>
 </div>
 <section class="tags_cloud inner">
   <h2>Поиск по тегам</h2>

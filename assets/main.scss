@@ -1,5 +1,6 @@
 ---
 ---
+
 @import "minima";
 
 /* @font-face {
@@ -37,7 +38,7 @@ h3 {
   color: #333333;
 }
 ul {
-  list-style-image: url('/assets/images/Ellipse.svg');
+  list-style-image: url("/assets/images/Ellipse.svg");
   margin-left: 18px;
 }
 li,
@@ -204,7 +205,7 @@ section {
 .why_me {
   .why_item {
     display: flex;
-    align-items: center;
+    align-items: start;
     padding: 10px 5px;
     * {
       margin: 5px auto;
@@ -283,6 +284,13 @@ section {
       cursor: pointer;
     }
     .contact_me {
+      hr { display: none;}
+      p {
+        margin: 0 auto;
+        padding-top: 20px;
+      }
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05);
+      border-radius: 5px;
       text-align: center;
       background: white;
       .messengers {
@@ -544,25 +552,25 @@ section {
     a {
       text-decoration-line: underline;
       color: #3862b1;
-      margin-left: 8px
+      margin-left: 8px;
     }
   }
 }
 
 @include media-query($on-palm) {
   .page-header {
-  height: 120px;
-}
-.post-header {
-  background-image: linear-gradient(to bottom, #253b4e, #253b4e 120px, #fff 120px);
-  padding-top: 120px;
-}
+    height: 120px;
+  }
+  .post-header {
+    background-image: linear-gradient(to bottom, #253b4e, #253b4e 120px, #fff 120px);
+    padding-top: 120px;
+  }
   .messengers {
     display: none;
   }
   .why_grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 10px;
     * {
       text-align: left;
@@ -804,12 +812,7 @@ section {
 
 @include media-query($on-laptop) {
   .why_grid {
-    display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    * {
-      text-align: left;
-    }
   }
   .inner {
     padding-left: 80px;
@@ -856,12 +859,12 @@ section {
 }
 @include media-query($on-desktop) {
   .page-header {
-  height: 80px;
-}
-.post-header {
-  background-image: linear-gradient(to bottom, #253b4e, #253b4e 80px, #fff 80px);
-  padding-top: 80px;
-}
+    height: 80px;
+  }
+  .post-header {
+    background-image: linear-gradient(to bottom, #253b4e, #253b4e 80px, #fff 80px);
+    padding-top: 80px;
+  }
   .why_grid {
     grid-gap: 20px;
   }
