@@ -8,3 +8,5 @@
   title: Сеньор
 - slug : customer
   title: Заказчик
+- slug : student
+  title: Студент

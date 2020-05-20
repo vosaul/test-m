@@ -79,9 +79,12 @@ pagination:
     before: 2
     after: 2
 # Build settings
+env: production
+minify_html: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+#  - octopress-minify-html
 permalink: /:year/:month/:day/:title:output_ext
 exclude:
   - .sass-cache/

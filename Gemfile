@@ -7,6 +7,7 @@ group :jekyll_plugins do
 #  gem 'jekyll-sitemap'
   gem 'jekyll-seo-tag'
   gem "jekyll-paginate-v2", ">= 3.0"
+ # gem 'octopress-minify-html'
 end
 
 gem 'liquid', github: 'Shopify/liquid', branch: 'master'
