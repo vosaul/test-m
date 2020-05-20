@@ -8,7 +8,7 @@ layout: default
   {%- assign pc = paginator.posts[0].categories[0] -%}
 
   {% for cat in site.data.categories %}
-  {% if cat.slug == pc %} 
+  {% if cat.slug == pc %}
   {%- assign category = cat.category -%}
   {%- break -%}
   {% endif %}
