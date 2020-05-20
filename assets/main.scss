@@ -32,9 +32,9 @@ h3 {
   color: #333333;
 }
 ul {
-  list-style-type: none; //url('/assets/images/Ellipse.svg');
+  list-style-image: url('/assets/images/Ellipse.svg');
   margin-left: 18px;
-  li {
+/*   li {
     &::before {
       content: "\2022";
       color: #14c284;
@@ -43,8 +43,8 @@ ul {
       display: inline-block;
       width: 18px;
       margin-left: -18px;
-    }
-  }
+    } 
+  } */
 }
 li,
 p {

@@ -13,7 +13,7 @@ layout: default
   {%- break -%}
   {% endif %}
   {% endfor %}
-
+{{paginator.posts}}
   <h2>Статьи за категорией<br>"{{category}}"</h2>
   <div class="posts_grid inner">
     {%- for post in paginator.posts -%}
@@ -32,6 +32,7 @@ layout: default
   <h2>Поиск по тегам</h2>
   {%- include tagcloud.html -%}
 </section>
+
 <!-- Pagination links -->
 <nav class="navigation inner" role="navigation">
   <h2 class="screen-reader-text">Posts navigation</h2>
