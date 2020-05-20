@@ -2,7 +2,7 @@ var gulp = require("gulp");
 var shell = require("gulp-shell");
 var browserSync = require("browser-sync").create();
 var load = require("gulp-load-plugins")();
-var autoprefixer = require("autoprefixer");
+//var autoprefixer = require("autoprefixer");
 var sass = require("gulp-sass");
 sass.compiler = require("node-sass");
 var sassPaths = [
@@ -11,6 +11,14 @@ var sassPaths = [
 ];
 const htmlmin = require("gulp-htmlmin");
 const minify = require('gulp-minify');
+const imagemin = require('gulp-imagemin');
+
+/* Images optimization */
+gulp.task("compressimg", () => {
+  return gulp.src('assets/images/*')
+    .pipe(imagemin())
+    .pipe(gulp.dest('_site/assets/images'))
+});
 
 /* compress JS files */
 gulp.task('compressjs', function () {
@@ -44,7 +52,8 @@ gulp.task("sass", function () {
 
 // Task for building blog when something changed:
 gulp.task("jekyll", shell.task("jekyll build"));
-gulp.task("jekyll-s", shell.task("jekyll serve"));
+gulp.task("jekyll_s", shell.task("jekyll serve"));
  
 /* Build site */
-gulp.task("default", gulp.series("jekyll", "minify", "compressjs", "sass"));
+gulp.task("serve", gulp.series("jekyll_s", "minify", "compressjs", "sass", "compressimg"));
+gulp.task("default", gulp.series("jekyll", "minify", "compressjs", "sass", "compressimg"));

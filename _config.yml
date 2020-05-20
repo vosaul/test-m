@@ -99,3 +99,4 @@ exclude:
   - vendor/ruby/
   - package-lock.json
   - package.json
+  - gulp.js
