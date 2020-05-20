@@ -43,19 +43,8 @@ gulp.task("sass", function () {
 });
 
 // Task for building blog when something changed:
-gulp.task("jekyll", shell.task("bundle exec jekyll build"));
-gulp.task("jekyll-s", shell.task("bundle exec jekyll serve"));
+gulp.task("jekyll", shell.task("jekyll build"));
+gulp.task("jekyll-s", shell.task("jekyll serve"));
  
-// Task for serving blog with Browsersync
-
-gulp.task("serve", function () {
-    browserSync.init({
-    server: { baseDir: "./" },
-    ui: { port: 4001 },
-    port: 4000,
-  });
-  gulp.watch("_site/**/*.*").on("change", browserSync.reload);
-});
-/* gulp.task("sass", sass); */
-gulp.task("build", gulp.series("jekyll", "minify", "compressjs", "sass"));
-gulp.task("default", gulp.parallel("jekyll-s", "serve"));
+/* Build site */
+gulp.task("default", gulp.series("jekyll", "minify", "compressjs", "sass"));
