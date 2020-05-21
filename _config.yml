@@ -100,3 +100,4 @@ exclude:
   - package-lock.json
   - package.json
   - gulp.js
+  - dist
