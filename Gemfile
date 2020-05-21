@@ -4,10 +4,9 @@ gem "jekyll", "~> 4.0.1"
 
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
-#  gem 'jekyll-sitemap'
+  gem 'jekyll-sitemap'
   gem 'jekyll-seo-tag'
   gem "jekyll-paginate-v2", ">= 3.0"
- # gem 'octopress-minify-html'
 end
 
 gem 'liquid', github: 'Shopify/liquid', branch: 'master'

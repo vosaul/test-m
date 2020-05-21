@@ -13,9 +13,6 @@ twitter_username: jekyllrb
 github_username:  jekyll
 # Pagination Settings
 collections:
- authors:
-  output: true
-  permalink: /author/:name/
 defaults:
   - scope:
       path: ""
@@ -31,9 +28,6 @@ defaults:
       path: ""
     values:
       layout: "default"
-excerpt_separator: <!--more-->
-permalink: /:year/:month/:day/:title:output_ext
-#excerpt_separator: <!--more-->
 autopages:
   enabled: true
   tags: 
@@ -84,8 +78,8 @@ minify_html: true
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-#  - octopress-minify-html
 permalink: /:year/:month/:day/:title:output_ext
+excerpt_separator: <!--more-->
 exclude:
   - .sass-cache/
   - .jekyll-cache/
