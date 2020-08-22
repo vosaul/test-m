@@ -1,16 +1,16 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.0.1"
-
+# gem "jekyll", "~> 4.0.1"
+gem "github-pages", group: :jekyll_plugins
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
   gem 'jekyll-sitemap'
   gem 'jekyll-seo-tag'
-  gem "jekyll-paginate-v2", ">= 3.0"
+#  gem "jekyll-paginate-v2", ">= 3.0"
 end
 
-gem 'liquid', github: 'Shopify/liquid', branch: 'master'
-gem 'liquid-c', github: 'Shopify/liquid-c', branch: 'master'
+#gem 'liquid', github: 'Shopify/liquid', branch: 'master'
+#gem 'liquid-c', github: 'Shopify/liquid-c', branch: 'master'
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
 # and associated library.
