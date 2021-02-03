@@ -19,4 +19,4 @@ jobs:
         source_branch: "master"
         destination_repo: "vosaul/test-m"  
         destination_branch: "main"
-        github_token: ${{ secrets.PAT }}
+        #github_token: ${{ secrets.PAT }}
