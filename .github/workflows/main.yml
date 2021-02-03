@@ -15,7 +15,7 @@ jobs:
     - name: repo-sync
       uses: repo-sync/github-sync@v2
       with:
-        source_repo: "vosaul/Guru-D"
+        source_repo: "vosaul/Guru-D/assets"
         source_branch: "master"
         destination_branch: "test"
         github_token: ${{ secrets.PAT }}
