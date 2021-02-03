@@ -17,5 +17,5 @@ jobs:
       with:
         source_repo: "vosaul/Guru-D"
         source_branch: "master"
-        destination_branch: "main"
+        destination_branch: "test"
         github_token: ${{ secrets.PAT }}
