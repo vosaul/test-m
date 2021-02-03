@@ -1,18 +1,22 @@
-# .github/workflows/git-sync.yml
+# File: .github/workflows/repo-sync.yml
 
-on: push
+on:
+  schedule:
+  - cron:  "*/15 * * * *"
+  workflow_dispatch:
+
 jobs:
-  git-sync:
+  repo-sync:
     runs-on: ubuntu-latest
     steps:
-      - name: git-sync
-        uses: wei/git-sync@v3
-        with:
-          source_repo: "vosaul/Guru-D"
-          source_branch: "master"
-          destination_repo: "vosaul/test-m"
-          destination_branch: "master"
-          #ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }} # optional
-          #source_ssh_private_key: ${{ secrets.SOURCE_SSH_PRIVATE_KEY }} # optional, will override `SSH_PRIVATE_KEY`
-          #destination_ssh_private_key: ${{ secrets.DESTINATION_SSH_PRIVATE_KEY }} # optional, will override `SSH_PRIVATE_KEY`
-
+    - uses: actions/checkout@v2
+      with:
+        persist-credentials: false
+    - name: repo-sync
+      uses: repo-sync/github-sync@v2
+      with:
+        source_repo: "vosaul/Guru-D"
+        source_branch: "master"
+        destination_repo: "vosaul/test-m"  
+        destination_branch: "main"
+        github_token: ${{ secrets.PAT }}
