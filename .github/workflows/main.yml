@@ -1,8 +1,6 @@
 # File: .github/workflows/repo-sync.yml
 
-on:
-  schedule:
-  - cron:  "*/15 * * * *"
+on: push
   workflow_dispatch:
 
 jobs:
@@ -15,7 +13,7 @@ jobs:
     - name: repo-sync
       uses: repo-sync/github-sync@v2
       with:
-        source_repo: "vosaul/Guru-D/assets"
+        source_repo: "vosaul/Guru-D"
         source_branch: "master"
         destination_branch: "test"
         github_token: ${{ secrets.PAT }}
