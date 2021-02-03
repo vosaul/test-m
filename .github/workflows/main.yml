@@ -1,7 +1,6 @@
 # File: .github/workflows/repo-sync.yml
 
 on: push
-  workflow_dispatch:
 
 jobs:
   repo-sync:
